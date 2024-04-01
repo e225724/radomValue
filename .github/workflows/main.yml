@@ -2,7 +2,7 @@ name: test
 
 on:
   push:
-    brancehs: [main]
+    branches: [main]
 
 jobs:
   build:
