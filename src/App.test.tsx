@@ -11,6 +11,13 @@ describe("App", () => {
     fireEvent.click(button);
   });
 
+  it("should get a random value from the minimum and maximum values", () => {
+    const randomizer = new GetRandomValue(0, 100);
+    const randomValue = randomizer.getRandom();
+    expect(randomValue).toBeGreaterThanOrEqual(0);
+    expect(randomValue).toBeLessThanOrEqual(100);
+  });
+
   it("should display an error message when minValue or maxValue is not a number", () => {
     const consoleErrorSpy = jest
       .spyOn(console, "error")
