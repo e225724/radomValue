@@ -27,7 +27,7 @@ describe("App", () => {
     expect(() => randomizer1.getRandom()).toThrow(GetRandomValueError);
 
     const randomizer2 = new GetRandomValue(0, NaN);
-    expect(() => randomizer2.getRandom()).toThrow(GetSizeRelationshipError);
+    expect(() => randomizer2.getRandom()).toThrow(GetRandomValueError);
 
     consoleErrorSpy.mockRestore();
   });
